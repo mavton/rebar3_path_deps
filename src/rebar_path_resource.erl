@@ -67,6 +67,7 @@ needs_update_(Dir, {path, Path}) ->
   LastModified = last_modified(Source),
   Old = filelib:last_modified(Dir),
   rebar_log:log(debug, "compare dir=~p, path=~p last modified=~p, old=~p~n", [Dir, Path, LastModified, Old]),
+  io:format("compare dir=~p, path=~p last modified=~p, old=~p~n", [Dir, Path, LastModified, Old]),
   (Old < LastModified).
 
 
